@@ -44,6 +44,9 @@ module.exports = {
                     include: [
                         {
                             model: models.tb_address
+                        },
+                        {
+                            model: models.tb_why_us
                         }
                     ]
                 }
@@ -72,6 +75,12 @@ module.exports = {
 
     getCert: (req, res) => {
         models.tb_certificate.findAll({})
+        .then(resp => {
+            res.status(200).json(resp)
+        })
+    },
+    getPartner: (req, res) => {
+        models.tb_partner.findAll({})
         .then(resp => {
             res.status(200).json(resp)
         })

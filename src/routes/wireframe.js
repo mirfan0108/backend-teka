@@ -4,6 +4,9 @@ const router = require('express').Router();
 
 router.get('/page/:page/lang/:id_lang', wireFrame.getWireframe)
 router.get('/lang', wireFrame.getLang)
+
 router.get('/sertificate', wireFrame.getCert)
+
+router.get('/partner', wireFrame.getPartner)
 
 module.exports = router;
