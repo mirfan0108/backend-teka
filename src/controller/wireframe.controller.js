@@ -44,9 +44,6 @@ module.exports = {
                     include: [
                         {
                             model: models.tb_address
-                        },
-                        {
-                            model: models.tb_certificate
                         }
                     ]
                 }
@@ -72,4 +69,11 @@ module.exports = {
             })
         }).catch( _err => res.status(_err.code || 500).send( _err ))
     },
+
+    getCert: (req, res) => {
+        models.tb_certificate.findAll({})
+        .then(resp => {
+            res.status(200).json(resp)
+        })
+    }
 }
