@@ -24,7 +24,7 @@
     "mysql2": "^1.7.0",
     "request": "^2.88.0",
     "sequelize": "^5.19.0",
-    "socket.io": "^2.3.0",
+    "socket.io": "^2.5.0",
     "xlsx": "^0.15.1"
   },
   "scripts": {
